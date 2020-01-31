@@ -28,8 +28,7 @@ class Tilemap:
         return res[0]
 
     def draw(self, tm, colkey=0):
-        bltm(0, 0, tm, self.x * self.size, self.y * self.size, self.size,
-             self.colkey)
+        bltm(0, 0, tm, self.x * self.size, self.y * self.size, self.size, self.size, self.colkey)
 
 
 def sprite(x, y, n, m=0, size=8, colkey=0):
@@ -37,5 +36,4 @@ def sprite(x, y, n, m=0, size=8, colkey=0):
 
 
 def mouse_tile_pos(tile_size=8, screen_size=64):
-    return floor(mouse_x * size / screen_size), floor(mouse_y * size /
-                                                      screen_size)
+    return floor(mouse_x * size / screen_size), floor(mouse_y * size / screen_size)
